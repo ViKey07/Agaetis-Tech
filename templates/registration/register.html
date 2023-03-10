@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Sign-Up</title>
+    </head>
+    <body>
+        <section class="container">
+            <a href="#"><span class="reg-head">Agaetis</span></a>
+
+            <!-- <p class="hd"> <span> <br> Sign Up </span></p> -->
+    
+            <form method="post">
+            
+                
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="buttons">
+                <button type="submit">Sign up <br></button> <br>
+                <div class="sign_in">
+                    <p class="signin_text">Already have an account.?</p> <a href="{% url 'login' %}">Sign-In</a> <br>
+                    </div>
+                </div>
+                <div class="copyright"> <br> <br>
+                    <p>Copyright © <a href="/"> Agaetis </a> 2023</p>
+                </div>
+
+            </form>
+        </section>
+</body>
+</html>

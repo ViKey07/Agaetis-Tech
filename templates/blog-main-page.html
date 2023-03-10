@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Agaetis Tech</title>
+</head>
+<body>
+     
+<nav id="main-nav">
+    <div class="main-nav-content">
+        <a href="{% url 'addblog' %}"><button class="subscribe"> Add a blog</button></a>
+        <p class="nav-heading">Large</p>
+        <div class="main-right-nav">
+            <button class="signup">{{ user }} &nbsp; &nbsp;</button>
+            <div class="logout"><a href="{% url 'logout' %}">Logout</a></div>
+        </div>
+    </div>
+</nav>
+
+<nav id="sub-nav">
+    <a href="World"><p class="nav2">World</p></a>
+    <a href="us"><p class="nav2">U.S.</p></a>
+    <a href="Technology"><p class="nav2">Technology</p></a>
+    <a href="Design"><p class="nav2">Design</p></a>
+    <a href="Culture"><p class="nav2">Culture</p></a>
+    <a href="Business"><p class="nav2">Business</p></a>
+    <a href="Politics"><p class="nav2">Politics</p></a>
+    <a href="Opinion"><p class="nav2">Opinion</p></a>
+    <a href="Science"><p class="nav2">Science</p></a>
+    <a href="Health"><p class="nav2">Health</p></a>
+    <a href="Style"><p class="nav2">Style</p></a>
+    <a href="Travel"><p class="nav2">Travel</p></a>
+</nav>
+
+    {% csrf_token %}
+    <div class="content">
+        <section class="post_form">
+    <br>
+    
+    
+    <div class="main_content">
+        <section class="title-box">
+            <p class="sec1-title">Modern Technologies and its impacts</p>
+            <p class="sec1-info">The modern world is filled with technology that has revolutionized the way we live, 
+                work and communicate. From smartphones and social media to artificial intelligence and renewable energy, 
+                technology has transformed almost every aspect of our lives. While these technological advancements have brought
+                 many benefits,</p>
+            <a href="/"><p class="sec1-cont">Continue reading...</p></a>
+        </section>
+        <section class="cards">
+            <div class="two-cards">
+                <div class="card1">
+                    <div class="card-body">
+                        <p class="sub-title1">Tech</p>
+                        <p class="card-title">Smartphones</p>
+                        <p class="card-date">March 11, 2023, 08:28 a.m.</p>
+                        <p class="card-info">Smartphones have become an integral part of our daily lives. From staying connected 
+                            with loved ones to managing our work, these devices have completely changed the way we live.
+                             In this blog, we'll take a closer look at smartphones, their evolution over time, and their impact on our lives.</p>
+                             <p class="card-cont">Continue reading</p>
+                        
+                    </div>
+                    <img class="card1img" src="{% static 'img/phones.jpg' %}" alt="" class="thmb">
+                </div>
+    
+                <div class="card1">
+                    <div class="card-body">
+                        <p class="sub-title2">Health</p>
+                        <p class="card-title">Mental Health</p>
+                        <p class="card-date">March 11, 2023, 08:28 a.m.</p>
+                        <p class="card-info">In recent years, the topic of mental health has gained increasing attention and awareness. 
+                            From celebrities opening up about their struggles to a growing number of mental health resources available, 
+                            there is no denying that the conversation around mental health has become more normalized.</p>
+                        <p class="card-cont">Continue reading</p>
+                        
+                    </div>
+                    <img class="card2img" src="{% static 'img/exercise.jpeg'%}" alt="" class="thmb">
+                </div>
+            </div>
+        </section>
+        {% for post in posts %}
+        <section class="blog">
+            <div class="left-blog">
+                <p class="small-title">From the Firehose</p>
+                <p class="blog-title">{{ post.title }}</p>
+                <div class="date-name">
+                    <p class="date">{{ post.created_at }}</p>
+                    <p class="name">{{ post.author }}</p>
+                </div>
+                <p class="blog-info">{{ post.short_content }}</p>
+                <p class="blog-desc">{{ post.content }}</p>
+                <a href="/blog/{{post.id}}/"><p class="card-cont">Continue reading</p></a>
+            </div>
+
+            
+    
+           
+    
+        
+        {% endfor %}
+
+        <div class="about">
+            <div class="about-sec">
+                <h5 class="about-title">About</h5>
+                <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo vel voluptatum quibusdam facere eaque nostrum similique, porro magni incidunt.</p>
+            </div>
+
+            <div class="archive">
+                <p class="archive-title">Archives</p>
+                <p class="month">March 2014</p>
+                <p class="month">February 2014</p>
+                <p class="month">January 2014</p>
+                <p class="month">December 2013</p>
+                <p class="month">November 2013</p>
+                <p class="month">October 2013</p>
+                <p class="month">September 2013</p>
+                <p class="month">August 2013</p>
+                <p class="month"></p>
+                <p class="month"></p>
+                <p class="month"></p>
+                <p class="month"></p>
+            </div>
+        </div>
+
+    </section>
+
+        
+        
+        
+    
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    <!-- <h2> <br>Title:{{ post.title }} </h2>
+    {% if post.image %}
+    <a href="/blog/{{post.id}}/"><img src="{{ post.image.url }}" alt="" class="content_image"> </a> -->
+    {% endif %}
+    <!-- <p>{{ post.content }}</p> -->
+    <!-- <p>Written by {{ post.author }} on {{ post.created_at }}</p> -->
+    <!-- <div id="e">
+        <a href="/blog/{{post.id}}/"> View Complete Blog </a> <br>
+    </div> -->
+    </div>
+    
+    
+    
+   
+    </div>
+</div>
+
+</body>
+</html>

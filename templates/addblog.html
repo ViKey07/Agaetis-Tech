@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Add A new Blog</title>
+</head>
+<body>
+    
+</body>
+</html>
+<form class="form" action="/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p class="form-head">Create a Blog</p>
+    <input class="form-title" type="text" name="title" placeholder="Title of blog" required><br><br>
+    <input class="author" type="text" name="author" placeholder="Name of Author" required><br><br>
+    <textarea class="form-desc" name="short_content" placeholder="Short Description" required></textarea><br><br>
+    <textarea class="form-cont" name="content" placeholder="Blog Content" required></textarea><br><br>
+    <input type="file" id="files" name="image" required /><br><br>
+    <input class="submit" type="submit" value="Create Blog" />
+</form>

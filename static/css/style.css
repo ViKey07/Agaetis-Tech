@@ -1,0 +1,332 @@
+
+/* ***************************** Navbar ***************************** */
+
+body {
+    margin: 0 3%;
+    padding: 0;
+}
+
+.main-nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid silver;
+}
+
+.subscribe {
+    font-family: Poppins;
+    color: red;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.s-logo{
+    width: 25px;
+}
+
+.signup {
+    padding: 5px;
+    border-radius: 3px;
+    background: white;
+    border: none;
+}
+
+.main-right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-heading {
+    font-size: xx-large;
+    margin: 0;
+    font-weight: 600;
+}
+
+#sub-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav2 {
+    font-family: 'Poppins';
+}
+
+/* ***************************** Title card section ***************************** */
+
+.title-box {
+    border: 1px solid gray;
+    background: #2e2b2b;
+    padding: 2%;
+    margin-bottom: 2%;
+    border-radius: 3px;
+}
+
+.sec1-title {
+    color: white;
+    margin: 2% 0 1% 0;
+    font-size: xxx-large;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+}
+
+.sub-title1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: #2152f3;
+}
+
+.sub-title2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: rgb(13, 170, 13);
+}
+
+.sec1-info {
+    color: white;
+    width: 40%;
+}
+
+.sec1-cont {
+    color: white;
+}
+
+/* *****************************  card section ***************************** */
+
+.two-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card1 {
+    display: flex;
+    border: 1px solid silver;
+    width: 48%;
+    box-shadow: 2px 2px 2px #dfdfdf;
+    border-radius: 3px;
+    height: 40vh;
+}
+
+.sub-title {
+    margin: 3% 0;
+}
+
+.card-title {
+    margin: 0 0 1% 0;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.card-date {
+    font-family: system-ui;
+    color: gray;
+    font-size: small;
+    margin: 0 0 3% 0;
+}
+
+.card-info {
+    margin: 0 0 1% 0;
+}
+
+.card-body {
+    width: 70%;
+    padding: 0 0 0 2%;
+}
+
+.thmb {
+    background-color: #5b5858;
+    width: 45%;
+    color: white;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.card-cont {
+    color: #2152f3;
+}
+
+img.card1img {
+    width: 30%;
+}
+
+img.card2img {
+    width: 30%;
+}
+
+/* ***************************** Blog section ***************************** */
+
+.blog {
+    display: flex;
+}
+
+.small-title {
+    border-bottom: 1px solid silver;
+    margin: 0;
+    font-size: x-large;
+    padding: 0 0 2% 0;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.date-name {
+    display: flex;
+}
+
+.date {
+    margin: 0 1% 0 0;
+    color: grey;
+}
+
+.name {
+    margin: 0;
+    color: #2152f3;
+}
+
+.blog-info {
+    border-bottom: 1px solid silver;
+    padding: 0 0 2% 0;
+}
+
+.left-blog {
+    width: 65%;
+    padding: 3% 3% 3% 0;
+}
+
+.blog-title {
+    margin: 0;
+    font-size: xxx-large;
+}
+
+.about-sec {
+    background-color: #f7f7f7;
+}
+
+.about-title {
+    padding: 4% 4% 0 4%;
+}
+
+.about-info {
+    padding: 0 4% 4% 4%;
+}
+
+.archive-title {
+    font-size: x-large;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0 0 1% 0;
+}
+
+.month {
+    margin: 0 0 1% 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    color: #2152f3;
+}
+
+.about {
+    width: 27%;  
+}
+
+img.card1img {
+    width: 30%;
+}
+
+img.card2img {
+    width: 30%;
+}
+
+
+
+/* Add blog form */
+
+.form {
+    text-align: center;
+    margin-top: 5%;
+    width: 70%;
+    margin: 0 15%;
+    border-radius: 10px;
+    padding: 0 0 2% 0;
+
+}
+
+.form-head {
+    font-size: x-large;
+    font-family: system-ui;
+}
+
+.form-title {
+    padding: 1%;
+    width: 50%;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid grey ;
+    color: white;
+}
+
+.author {
+    padding: 1%;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid grey;
+    color: white;
+    background-color: transparent;
+}
+
+.form-desc {
+    padding: 5%;
+    width: 42%;
+    border-radius: 50px;
+    color: white;
+    background-color: transparent;
+}
+
+.form-cont {
+    padding: 5%;
+    width: 42%;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.submit {
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    color: blue;
+}
+
+/* ***************************** SignUp section ***************************** */
+
+.container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.sec {
+    text-align: center;
+}
+
+#id_username {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+#id_password {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.signin {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
